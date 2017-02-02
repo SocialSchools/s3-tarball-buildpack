@@ -86,5 +86,5 @@ done < .buildpack-s3-tarballs
 
 if [ -n "${S3_BUILDPACK_TARBALL}" ]; then
     echo "-----> s3tarballing ${S3_BUILDPACK_TARBALL}"
-    s3simple get "$S3_BUILDPACK_TARBALL" 
+    s3simple get "$S3_BUILDPACK_TARBALL" | tar -zx
 fi
